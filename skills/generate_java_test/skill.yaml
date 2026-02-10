@@ -1,0 +1,19 @@
+name: generate_java_test
+description: "为给定的 Java 类或方法生成 JUnit 5 单元测试"
+version: "1.0"
+tags:
+  - java
+  - testing
+  - junit
+input_schema:
+  class_name: str          # 被测类名
+  method_signature: str    # 方法签名（可选）
+  source_code: str         # 被测类完整源码
+  framework: str           # 测试框架（默认 junit5）
+output_schema:
+  test_class: str          # 生成的测试类代码
+  dependencies: list       # 需要添加的依赖（如 Mockito）
+capabilities:
+  - reads_project_context
+  - writes_to_file
+  - validates_output
