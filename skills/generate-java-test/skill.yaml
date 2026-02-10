@@ -1,4 +1,4 @@
-name: generate_java_test
+name: generate-java-test
 description: "为给定的 Java 类或方法生成 JUnit 5 单元测试"
 version: "1.0"
 tags:
